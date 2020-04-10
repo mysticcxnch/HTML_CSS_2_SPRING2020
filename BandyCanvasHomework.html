@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- don't forget the canvas to paint on  -->
+        <canvas id = "myCanvas" width = "300" height = "400" style = "border: 3px solid black">
+        
+        </canvas>
+
+    <!-- for drawImage() -->
+   
+
+    <!--Image to use in HTML -->
+    <p>Image to use</p>
+    <img id = "kittens"  alt = "two kittens" src = "http://www.kittens.com/media/W1siZiIsIjIwMTIvMDQvMjYvMjAvMDcVMTIvODg3L2tpdHR1bnMuY29tLmpwZyJdLFsicCIsInRodW1iIiwiMjUweDIwMCMiXV0/kittens.com.jpg" width = "400" height = "300">
+
+    <!-- Create a canvas to fill -->
+
+    <p>Canvas to fill</p>
+    <canvas id = "myKittensCanvas" width = "450" height = "350" style = "border: 1px black solid">
+
+    </canvas>
+
+    <p> <button onclick = "myKittensanvas()">
+        
+        Try it!
+    
+    </button>
+
+
+    <script>
+
+        // draw a line
+        // var line = document.getElementById("myCanvas");
+        // var ctx = line.getContext("2d");
+        // ctx.moveTo(100, 50);
+        // ctx.lineTo(170, 200);
+        // ctx.stroke();
+
+        // draw a line
+        // var line = document.getElementById("myCanvas");
+        // var ctx = line.getContext("2d");
+        // ctx.moveTo(100, 150);
+        // ctx.lineTo(270, 300);
+        // ctx.stroke();
+
+
+        // draw a circle
+        // var circle = document.getElementById("myCanvas");
+        // var ctx = circle.getContext("2d");
+        // ctx.beginPath();
+        // ctx.arc(150, 200, 10, 0, 2*Math.PI);
+        // ctx.stroke();
+
+        // var circle2 = document.getElementById("myCanvas");
+        // var ctx = circle2.getContext("2d");
+        // ctx.beginPath();
+        // ctx.arc(50, 10, 10, 0, 2*Math.PI);
+        // ctx.stroke();
+        
+        // var circle3 = document.getElementById("myCanvas");
+        // var ctx = circle3.getContext("2d");
+        // ctx.beginPath();
+        // ctx.arc(245, 300, 10, 0, 2*Math.PI);
+        // ctx.stroke();
+
+        
+        // draw a linear gradient 
+            // var linearGradient = document.getElementById("myCanvas");
+            // var ctx = linearGradient.getContext("2d");
+
+
+                // create the gradient
+                    // var gradient = ctx.createLinearGradient(0, 0, 200, 0);
+                    // gradient.addColorStop(1, "red");
+                    // gradient.addColorStop(0.5, "pink");
+
+                // fill the gradient
+                    // ctx.fillStyle = gradient;
+                    // ctx.fillRect(0, 0, 300, 400);
+
+
+        // ********************Canvas part 2 tutorial *******************
+
+        // draw a radial gradient (circle)
+
+            var circGradient = document.getElementById("myCanvas");
+            var ctx = circGradient.getContext('2d');
+            var gradient = ctx.createRadialGradient(75, 50, 5, 90, 60, 100) // x, y, r, x1, y1, r1
+
+
+        //    create the gradient
+
+            gradient.addColorStop(0, "blue");
+            gradient.addColorStop(1, "white");
+
+        //   fill the gradient
+  
+            ctx.fillStyle = gradient;
+            ctx.fillRect(10, 10, 150, 80) // x, y, width, height
+
+
+
+        // drawText()
+
+            var textContent = document.getElementById("myCanvas");
+            var ctx = textContent.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.fillText("Hello World!", 10, 50);
+            
+
+        // strokeText()
+
+            var strokeText = document.getElementById("myCanvas");
+            var ctx = strokeText.getContext("2d");
+            ctx.font = "30px Arial";
+            ctx.strokeText("Hello World Again!", 10, 50);
+
+        // drawImage()
+
+            function myKittensCanvas()
+            {
+                var kittensImage = document.getElementById("myKittensCanvas");
+                var ctx = kittensImage.getContext("2d");
+                var img = document.getElementById("kittens");
+                ctx.drawImage(Img, 0, 0);
+            }
+    </script>
+
+
+
+    
+</body>
+</html> 
