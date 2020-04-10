@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Tutorial</title>
+</head>
+<body>
+
+    <h1>SVG Tutorial stuff</h1>
+
+    <!-- Let's learn about SVG rectangles -->
+   
+        <svg width = "400" 
+             height = "400">
+            
+        <rect width = "300" 
+              height = "100" 
+              style = "fill:black; 
+                       stroke-width: 5; 
+                       stroke: yellow">
+
+                
+
+        </rect>
+        </svg>
+
+
+    <!-- Example #2 for SVG rectangles playing w/ opacity -->
+  
+        <svg width = "400" height = "300">
+            <rect x = "50" y = "20" width = "150" height = "150" style = "fill: blue; stroke: pink; stroke-width: 5; fill-opacity: 0.1; stroke-opacity: 0.9;">
+
+            </rect>
+        </svg>
+    
+
+
+    <!-- Example #3 for SVG rectangles playing w/ rounded corners-->
+
+        <svg width = "400" height = "300">
+           
+            <rect x = "50" y = "20" rx = "20" ry = "20" width = "150" height = "150" style = "fill:red; stroke: black; stroke-width: 5; opacity: 0.5;">
+
+            </rect>
+        </svg>
+
+
+   
+
+
+    <!-- ****************  SVG TEXT ******************************* -->
+    <!-- TIP:  use Dev Tools to see how the text is setting in the SVG element -->
+
+    
+
+
+    <!-- Example 1 for SVG Text -->
+
+        <svg width = "200" height = "400">
+
+            <text x = "0" y = "15" fill = "red" style = "font-family: Arial; font-size: 40px">
+                
+                Are you a cat or dog person?
+
+            </text>
+        
+        </svg>
+
+
+    <!-- Example 2 for SVG Text -->
+    <!-- fix it by using Dev tools -->
+
+        <svg width = "300" height = "500">
+
+            <text x = "0" y = "15" fill = "blue" transform = "rotate(90, 60, 100)">
+
+                I like both!
+
+            </text>
+
+        </svg>
+  
+
+    <!-- ********************* SVG DROP SHADOWS *********************** -->
+
+    <!-- feoffset -->
+    <!-- NOTE:  There aren't closing tags from some of the elements -->
+    
+        <svg width = "400" height = "400">
+
+            <defs>
+
+                <filter id = "f1" x = "0" y = "0" width = "200%" height = "200%">
+
+                    <feOffset result = "offout" in = "SourceGraphic" dx = "20">
+
+                        <feBlend in = "SourceGraphic" in2 = "offOut" mode = "Normal">
+
+                        
+
+                    
+
+                </filter>
+
+            </defs>
+
+            <rect width = "90" height = "90" stroke = "green" stroke-width = "30" fill = "yellow" filter = "url(#f1)">
+
+            </rect>
+        </svg>
+
+
+    
+</body>
+</html>
