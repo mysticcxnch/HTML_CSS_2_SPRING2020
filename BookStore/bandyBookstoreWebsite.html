@@ -19,17 +19,24 @@
 
 <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<link rel = "stylesheet" href = "/Volumes/Jos's Drive/HTML:CSS2/HTML_CSS_2_SPRING2020/BookStore">
+
 
 <!-- style here -->
 <Style>
 
-/* Add a black background color to the top navigation bar */
+
+body
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #e9e9e9;
 }
 
-/* Style the search box inside the navigation bar */
 .topnav input[type=text] {
   float: right;
   padding: 6px;
@@ -39,7 +46,7 @@
   font-size: 17px;
 }
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+/* here is the sass media query */
 @media screen and (max-width: 600px) {
   .topnav a, .topnav input[type=text] {
     float: none;
@@ -81,6 +88,8 @@ li a, .dropbtn
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-family: inherit;
+    margin: 0;
 }
 
 li a:hover, .dropdown:hover .dropbtn
@@ -131,8 +140,39 @@ li a:hover:not(.active) {
   background-color: #009E49;
 }
 
+.grid-container > div
+{
+    background-color: #FCA311;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 30px;
+}
+
+.grid-container2 > div
+{
+    background-color: white;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.center
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 
+.grid-container_3
+{
+  background-color: #FCA311;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
 </Style>
 </head>
 
@@ -151,35 +191,32 @@ li a:hover:not(.active) {
 	<img src="https://www.hocking.edu/hs-fs/hubfs/ColorLogo_1-1.png?width=500&amp;name=ColorLogo_1-1.png" class="hs-image-widget " style="width:165px;border-width:0px;border:0px;" width="165" alt="hockinglogo.png" title="hockinglogo.png" srcset="https://www.hocking.edu/hs-fs/hubfs/ColorLogo_1-1.png?width=250&amp;name=ColorLogo_1-1.png 250w, https://www.hocking.edu/hs-fs/hubfs/ColorLogo_1-1.png?width=500&amp;name=ColorLogo_1-1.png 500w, https://www.hocking.edu/hs-fs/hubfs/ColorLogo_1-1.png?width=750&amp;name=ColorLogo_1-1.png 750w, https://www.hocking.edu/hs-fs/hubfs/ColorLogo_1-1.png?width=1000&amp;name=ColorLogo_1-1.png 1000w, https://www.hocking.edu/hs-fs/hubfs/ColorLogo_1-1.png?width=1250&amp;name=ColorLogo_1-1.png 1250w, https://www.hocking.edu/hs-fs/hubfs/ColorLogo_1-1.png?width=1500&amp;name=ColorLogo_1-1.png 1500w" sizes="(max-width: 165px) 100vw, 165px">
   
   
-  <!-- this image (HAWKS SPIRIT STORE) needs to be centered and linked -->
-  <span id="hs_cos_wrapper_module_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" data-hs-cos-general-type="widget" data-hs-cos-type="logo">
-	
-  <a href="//https://bookstore.hocking.edu/" id="hs-link-module_" style="border-width:0px;border:0px;">
-
-	<img src="https://github.com/mysticcxnch/HTML-CSS-WEEK2/blob/master/hawkspiritstore.png?raw=true"  class="hs-image-widget " style="width:500px;border-width:0px;border:0px;" width="500" alt="hockinglogo.png" title="hockinglogo.png">
+ 
 		
-</a></span></div><!--end layout-widget-wrapper -->
+</a></span></div>
 	
-</div><!--end widget-span -->
-</div><!--end row-->
-</div><!--end row-wrapper -->
+</div>
+</div>
+</div>
 
 <div class = "topnav">
 
 
 <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="bookstore.hocking.edu">Home</a></li>
+    <li><a href="bookstore.hocking.edu/#news">News</a></li>
+    <li><a href="bookstore.hocking.edu/#about">About</a></li>
     <li class = "dropdown">
 
-        <a href = "javascript:void(0)" class = "dropbtn">Store</a>
+        <a href = "javascript:void(0)" class = "dropbtn">Store<i class = "fa fa-caret-down"></i></a>
 
         <div class = "dropdown-content">
 
             <a href = "#">Clothes</a>
             <a href = "#">Gifts</a>
             <a href = "#">Tech Supplies</a>
+    <!-- here you can see the link to hawk merch works -->        
+            <a href = "https://hchawksgear.merchorders.com">Hawk Merch</a>
 
         </div>
     </li>
@@ -188,12 +225,55 @@ li a:hover:not(.active) {
 
     <li style="float:right"><a class="active" href="#cart">Cart</a></li>
 
+    <div class = "search-container">
+
+    <form action = "/action_page.php">
+
     <input type = "text" placeholder = "Keyword, Title, or ISBN">
-    
+
+
+    </form>
+
+    </div>
+
   </ul>
 </div>
 
+<div class = "grid-container">
 
-	  
+<div>
+    
+    <h6><div style = "">Welcome to the new and improved</h6></div>
+
+</div>
+	
+<div class = "grid-containter2">
+  
+    <img src="https://github.com/mysticcxnch/HTML-CSS-WEEK2/blob/master/hawkspiritstore.png?raw=true"  class="center" alt="hockinglogo.png" title="hockinglogo.png">
+
+</div>
+
+<div class = "grid-container_3">
+  
+      **We've changed a few things, but all you need is still here!**
+  
+</div>
+
+<p><h1><center>CONTENT CAN GO HERE</center></h1></p>
+<p><h1><center>vvvvvvvv</center></h1></p>
+
+
+
+
+
+<div class = "">
+
+<ul>
+  <li></li>
+</ul>
+
+</div>
+
+</div>
 </body>
 </html>
